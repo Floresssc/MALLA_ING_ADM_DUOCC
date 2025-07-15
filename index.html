@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Malla Ingeniería en Administración</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <h1>Malla Curricular – Ingeniería en Administración</h1>
+
+  <div class="malla">
+    <div class="semestre">
+      <h2>1º Semestre</h2>
+      <div class="ramo" data-id="ECO101" onclick="aprobarRamo('ECO101')">Fundamentos de Economía</div>
+      <div class="ramo" data-id="COM101" onclick="aprobarRamo('COM101')">Habilidades de Comunicación</div>
+      <div class="ramo" data-id="MAT001" onclick="aprobarRamo('MAT001')">Nivelación Matemática</div>
+    </div>
+
+    <div class="semestre">
+      <h2>2º Semestre</h2>
+      <div class="ramo bloqueado" data-id="FIN201" data-prereq="ECO101" onclick="aprobarRamo('FIN201')">Administración Financiera</div>
+      <div class="ramo bloqueado" data-id="COM102" data-prereq="COM101" onclick="aprobarRamo('COM102')">Habilidades de Comunicación para el Trabajo</div>
+    </div>
+  </div>
+
+  <div id="promedio" class="promedio-box">Promedio General: 0.00</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
